@@ -4,6 +4,11 @@ context("Zugriff auf Spaxe X API", () => {
       .its("body")
       .should("have.length", 10);
   });
-});
 
-it();
+  it("sollte überprüfen, ob die API erreichbar ist", () => {
+    // Da du die eigentliche Prüfung schon im 'before'-Block gemacht hast,
+    // kann dieser Testfall für den Anfang sogar leer bleiben.
+    // Cypress braucht nur eine gültige Hülle!
+    cy.log("Der before-Block war erfolgreich!");
+  });
+});
