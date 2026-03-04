@@ -12,4 +12,12 @@ describe("Benutzerdefinierte Befhele in support/commands.js", () => {
     cy.setLocalStorage("token", token);
     cy.getLocalStorage("token").should("eq", token);
   });
+
+  it("overwrites ther type command by using sensitive characters", () => {
+    cy.visit("/commands/actions");
+    cy.findByPlaceholderText("Email").type("test@email.de");
+    cy.findByPlaceholderText("Email").type("test@email.de", {
+      sensitive: true,
+    });
+  });
 });
