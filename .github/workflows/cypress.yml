@@ -1,0 +1,14 @@
+name: Cypress Tests
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v4
+
+      - name: Cypress Tests ausführen
+        uses: cypress-io/github-actions@v6
